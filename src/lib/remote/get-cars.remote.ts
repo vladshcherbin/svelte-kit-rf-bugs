@@ -3,7 +3,7 @@ import { query } from '$app/server'
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export const getCars = query(async () => {
-  await delay(3000)
+  await delay(6000)
 
   return [
     { id: 1, name: 'Car 1' },
