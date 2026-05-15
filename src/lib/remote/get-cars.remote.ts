@@ -1,9 +1,12 @@
 import { query } from '$app/server'
+import { nullable, string } from 'valibot'
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-export const getCars = query(async () => {
+export const getCars = query(nullable(string()), async () => {
   await delay(3000)
+
+  // filter cars by brand
 
   return [
     { id: 1, name: 'Car 1' },

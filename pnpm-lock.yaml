@@ -23,6 +23,9 @@ importers:
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
+      valibot:
+        specifier: ^1.4.0
+        version: 1.4.0(typescript@6.0.3)
       vite:
         specifier: ^8.0.7
         version: 8.0.12
@@ -663,6 +666,14 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  valibot@1.4.0:
+    resolution: {integrity: sha512-iC/x7fVcSyOwlm/VSt7RlHnzNGLGvR9GnxdifUeWoCJo0q4ZZvrVkIHC6faTlkxG47I2Y4UrFquPuVHCrOnrLg==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   vite@8.0.12:
     resolution: {integrity: sha512-w2dDofOWv2QB09ZITZBsvKTVAlYvPR4IAmrY/v0ir9KvLs0xybR7i48wxhM1/oyBWO34wPns+bPGw5ZrZqDpZg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1242,6 +1253,10 @@ snapshots:
     optional: true
 
   typescript@6.0.3: {}
+
+  valibot@1.4.0(typescript@6.0.3):
+    optionalDependencies:
+      typescript: 6.0.3
 
   vite@8.0.12:
     dependencies:
